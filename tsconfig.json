@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "lib": ["es6", "es7", "dom", "esnext"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "noImplicitAny": false,
+    "outDir": "dist",
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "es2017",
+    "rootDirs": ["./"],
+  },
+  "include": ["./main.ts", "./utils/*", "./static/*", "./entites/*"],
+  "exclude": ["node_modules", "dist"]
+}
+
+

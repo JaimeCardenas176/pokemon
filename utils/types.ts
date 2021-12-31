@@ -1,0 +1,20 @@
+export enum TYPE {
+    'BUG'=1,
+    'DRAGON',
+    'ELECTRIC',
+    'FAIRY',
+    'FIGHT',
+    'FIRE',
+    'FLYING',
+    'GHOST',
+    'GRASS',
+    'GROUND',
+    'ICE',
+    'NORMAL',
+    'PSYCHIC',
+    'ROCK',
+    'POISON',
+    'STEEL',
+    'WATER',
+    'DARK'
+}
