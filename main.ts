@@ -15,17 +15,17 @@ const statsCharmander = [ 39, 52, 43, 80, 65, 65];
 
 //example movements
 const movsBulbasaur = [
-    new Movement('tackle', 35, 12, category.PHYSICAL, 0.0125, 0.85, 10),
-    new Movement('scratch', 35, 12, category.PHYSICAL, 0.0125, 0.85, 35),
+    new Movement('tackle', 35, TYPE[1], category.PHYSICAL, 0.0125, 0.85, 35),
+    new Movement('scratch', 35, TYPE[1], category.PHYSICAL, 0.0125, 0.85, 45),
 ];
 const movsCharmander = [
-    new Movement('tackle', 35, 12, category.PHYSICAL, 0.0125, 0.85, 10),
-    new Movement('scratch', 35, 12, category.PHYSICAL, 0.0125, 0.85, 35),
+    new Movement('tackle', 35, TYPE[1], category.PHYSICAL, 0.0125, 0.85, 35),
+    new Movement('scratch', 35, TYPE[1], category.PHYSICAL, 0.0125, 0.85, 45),
 ];
 
 //pokemons
-const bulbasaur = new Pokemon('bulbasaur', 5, TYPE[9], statsBulbasaur, movsBulbasaur, 0, statsBulbasaur[0], 0, TYPE[15]);
-const charmander = new Pokemon('charmander', 5, TYPE[6], statsCharmander, movsCharmander, 0, statsCharmander[0], 0);
+const bulbasaur = new Pokemon('bulbasaur', 5, TYPE[12], statsBulbasaur, movsBulbasaur, 0, statsBulbasaur[0], 0, TYPE[4]);
+const charmander = new Pokemon('charmander', 5, TYPE[10], statsCharmander, movsCharmander, 0, statsCharmander[0], 0);
 
 const battle = new Battle(bulbasaur, charmander);
 
@@ -41,7 +41,7 @@ async function askCommand(pokemon: Pokemon): Promise<Command>{
         const ans: string[] = answer.split('');
         if(ans.length === 2){
             if (ans[0] === COMMANDS.DO_ATTACK && (Number(ans[1]) >= 0 && Number(ans[1]) < 4))
-                command = new Command( {DO_ATTACK: Number(ans[0]) } );
+                command = new Command( {DO_ATTACK: Number(ans[1]) } );
         }
     }
     reader.close()
