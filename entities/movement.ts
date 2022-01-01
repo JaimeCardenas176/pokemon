@@ -9,7 +9,7 @@ export class Movement {
     //percentage
     accuracy: number;
     
-    type: number;
+    type: string;
 
     power: number;
 
@@ -22,7 +22,7 @@ export class Movement {
     //special or fisic
     category: category;
 
-    constructor(name: string, pp: number, type: number, category: category, critical?: number, accuracy?: number, power?: number, sideEffect?: number) {
+    constructor(name: string, pp: number, type: string, category: category, critical?: number, accuracy?: number, power?: number, sideEffect?: number) {
         this.name=name;
         this.pp=pp;
         this.type=type;
